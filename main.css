@@ -1,0 +1,238 @@
+#product-overview {
+    margin: 0;
+    background: red;
+    padding: 1rem;
+    border: 2px solid black;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#product-overview h1 {
+    margin: 1rem;
+    margin-top: 0;
+    text-align: center;
+}
+
+#product-overview h1 strong {
+    font-weight: 800;
+    font-size: 2.3rem;
+    font-style: oblique;
+}
+
+@media (min-width: 33rem) {
+    #product-overview {
+        flex-flow: row;
+    }
+}
+
+#product-overview img {
+    width: 14.5rem;
+    border-radius: 50%;
+    border: 1px solid white;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+#product-overview img:hover {
+    animation: spin .8s ease-in;
+}
+
+.section-title {
+    color: black;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.plan {
+    margin: auto;
+    background: #d5ffdc;
+    width: 95%;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (min-width: 40rem) {
+    .products {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .plan {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30%;
+        margin: 0.5rem 0rem;
+        min-width: 13rem;
+        max-width: 25rem;
+        height: 28rem;
+    }
+    .plan--highlighted {
+        z-index: 20;
+        height: 32rem;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.plan--highlighted {
+    background: #19b84c;
+    color: white;
+}
+
+.plan__annotation {
+    background: white;
+    color: #19b84c;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    font-size: 1.17rem;
+    padding: 1rem 0;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.plan ul li {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.plan ul li:last-child {
+    margin-bottom: 1rem;
+}
+
+.end-note {
+    margin: 1rem 1rem 1rem;
+    text-align: center;
+}
+
+#key-features {
+    background: red;
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 2px solid black;
+}
+
+#key-features .section-title {
+    margin: 2rem;
+}
+
+.key-features__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+@media (min-width: 40rem) {
+    .end-note {
+        margin: 2rem 1rem 1rem;
+    }
+    #key-features {
+        margin-top: 3rem;
+    }
+    .key-features__list {
+        display: flex;
+        justify-content: center;
+    }
+    .key-feature {
+        flex-basis: 30%;
+        max-width: 25rem;
+    }
+}
+
+.key-feature__image {
+    background: #ffcede;
+    width: 128px;
+    height: 128px;
+    border: 2px solid #424242;
+    border-radius: 50%;
+    margin: auto;
+    padding: 1.2rem;
+}
+
+.key-feature__description {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.modal {
+    position: fixed;
+    z-index: 200;
+    opacity: 0;
+    transform: translateY(-20rem);
+    transition: opacity 200ms ease-in, transform 500ms ease-in;
+    width: 50%;
+    left: 25%;
+    top: 30%;
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.modal__title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.modal__actions {
+    text-align: center;
+}
+
+.modal__action {
+    border: 1px solid #0e4f1f;
+    background: #0e4f1f;
+    text-decoration: none;
+    color: white;
+    font: inherit;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.modal__action:hover,
+.modal__action:active {
+    background: #2ddf5c;
+    border-color: #2ddf5c;
+}
+
+.modal__action--negative {
+    background: red;
+    border-color: red;
+}
+
+.modal__action--negative:hover,
+.modal__action--negative:active {
+    background: #ff5454;
+    border-color: #ff5454;
+}
+
+@media (max-width:20.6rem) {
+    .modal__action {
+        padding: 0.5rem;
+    }
+}
+
+@media (min-width: 40rem) {
+    .modal {
+        left: 30%;
+        width: 40%;
+    }
+    .modal__title {
+        font-size: 2rem;
+    }
+}
+
+.open {
+    display: block !important;
+}
+
